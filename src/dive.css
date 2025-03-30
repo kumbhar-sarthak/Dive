@@ -61,13 +61,27 @@ body {
   }
 }
 
+.provider-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh; 
+}
+
+@media screen and (max-width: 1200px) {
+  .provider-container {
+    height: 100%;
+  }
+}
+
 
 .image-container {
   position: relative;
-  width: 25vw;
   height: 80%;
   overflow: hidden;
-  border-radius: 10px;
+  margin: 20px;
 }
 
 .image-container img {
