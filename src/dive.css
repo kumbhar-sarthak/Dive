@@ -131,6 +131,36 @@ body {
   gap: 20px;
 }
 
+.faq-container{
+  padding: 5vw;
+}
+
+.faq {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  color: #555;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+.faq.open .faq-answer {
+  max-height: 200px; 
+  opacity: 1;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
 @media screen and (max-width: 650px) {
   .contact {
     border-bottom: 1px solid white;

@@ -104,7 +104,7 @@
     <div style="color: black; font-weight: 700; text-align: center;">
       <h2>What we Provide ?</h2>
     </div>
-    <div class="provider-container" >
+    <div class="provider-container">
       <div class="image-container">
         <img src="https://images.pexels.com/photos/3266821/pexels-photo-3266821.jpeg?auto=compress&cs=tinysrgb&w=600"
           alt="QoS">
@@ -143,6 +143,34 @@
       </div>
     </div>
   </section>
+
+
+  <section class="vh-100 w-100 text-black p-4 mt-5">
+    <div>
+      <div class="display-6">
+        Freaquently Asked Questions
+      </div>
+      <div class="faq-container">
+        <div class="faq">
+          <div class="faq-header">How do I register for a scuba diving session? <span>+</span></div>
+          <p class="faq-answer">You can register for a scuba diving session online through our website. Simply choose your preferred date, location, and package, then complete the payment process.</p>
+      </div>
+      <div class="faq">
+          <div class="faq-header">Do I need prior experience to register? <span>+</span></div>
+          <p class="faq-answer">No prior experience is required. We offer beginner-friendly sessions with professional instructors who guide you through the basics before diving.</p>
+      </div>
+      <div class="faq">
+          <div class="faq-header">What should I bring for my scuba diving session? <span>+</span></div>
+          <p class="faq-answer">We provide all necessary scuba gear. However, you should bring swimwear, a towel, sunscreen, and a change of clothes for after the session.</p>
+      </div>
+      </div>
+    </div>
+
+    <div>
+
+    </div>
+  </section>
+
 
   <footer id="f" style="display: flex; align-items: end; width: 100%; height: 100vh">
     <div class="container-fluid ban">
@@ -206,6 +234,7 @@
   </footer>
 
 
+  <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
   <script>
     const ele = document.querySelector(".about-us");
 
@@ -215,11 +244,27 @@
       if (window.scrollY > 680) {
         ele.classList.add("about-us-description");
         ele.classList.remove("about-us");
-      } else {
-        ele.classList.remove("about-us-description");
-        ele.classList.add("about-us");
       }
     });
+  </script>
+  <script>
+    document.querySelectorAll(".faq").forEach(faq => {
+      faq.addEventListener("click", function () {
+        this.classList.toggle("open");
+        let icon = this.querySelector(".faq-header span");
+        icon.textContent = this.classList.contains("open") ? "−" : "+";
+      });
+    });
+  </script>
+  <script>
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   </script>
 </body>
 
