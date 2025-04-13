@@ -180,3 +180,15 @@ body {
     justify-content: end;
   }
 }
+
+
+.active-thumb {
+  border: 3px solid #000000;
+}
+
+@media (max-width: 768px) {
+  .thumb {
+    width: 80px;
+    height: 50px;
+  }
+}

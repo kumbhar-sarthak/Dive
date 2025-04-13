@@ -153,33 +153,49 @@
       <div class="faq-container">
         <div class="faq">
           <div class="faq-header">How do I register for a scuba diving session? <span>+</span></div>
-          <p class="faq-answer">You can register for a scuba diving session online through our website. Simply choose your preferred date, location, and package, then complete the payment process.</p>
-      </div>
-      <div class="faq">
+          <p class="faq-answer">You can register for a scuba diving session online through our website. Simply choose
+            your preferred date, location, and package, then complete the payment process.</p>
+        </div>
+        <div class="faq">
           <div class="faq-header">Do I need prior experience to register? <span>+</span></div>
-          <p class="faq-answer">No prior experience is required. We offer beginner-friendly sessions with professional instructors who guide you through the basics before diving.</p>
-      </div>
-      <div class="faq">
+          <p class="faq-answer">No prior experience is required. We offer beginner-friendly sessions with professional
+            instructors who guide you through the basics before diving.</p>
+        </div>
+        <div class="faq">
           <div class="faq-header">What should I bring for my scuba diving session? <span>+</span></div>
-          <p class="faq-answer">We provide all necessary scuba gear. However, you should bring swimwear, a towel, sunscreen, and a change of clothes for after the session.</p>
-      </div>
+          <p class="faq-answer">We provide all necessary scuba gear. However, you should bring swimwear, a towel,
+            sunscreen, and a change of clothes for after the session.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="p-4 d-flex justify-content-end">
+  <section class="vh-100 w-100">
+    <div
+      class="container-fluid h-100 d-flex flex-column flex-md-row p-4 gap-3 align-items-start justify-content-between">
 
-      <div>
-        <img style=" height: 250px;" src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+      <div class="flex-grow-1 w-100">
+        <img id="mainImage" class="img-fluid w-100 rounded shadow"
+          src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
+          alt="Main Display" style="max-height: 80vh; object-fit: cover; object-position: center;" />
       </div>
 
-      <div>
-        <div class="bg-danger rounded-2 pointer-event" style="width: 100px; height: 60px;">hello</div>
-        <div class="bg-danger mt-1 rounded-2 pointer-event" style="width: 100px; height: 60px;">hello</div>
-        <div class="bg-danger mt-1 rounded-2 pointer-event" style="width: 100px; height: 60px;">hello</div>
-        <div class="bg-danger mt-1 rounded-2 pointer-event" style="width: 100px; height: 60px;">hello</div>
+      <div class="d-flex flex-row flex-wrap gap-2" id="thumbnailContainer">
+        <img class="thumb pointer-event rounded-2"
+          src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
+          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
+
+        <img class="thumb pointer-event rounded-2"
+          src="https://images.pexels.com/photos/2711640/pexels-photo-2711640.jpeg?auto=compress&cs=tinysrgb&w=3840"
+          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
+
+        <img class="thumb pointer-event rounded-2"
+          src="https://images.pexels.com/photos/1274009/pexels-photo-1274009.jpeg?auto=compress&cs=tinysrgb&w=3840"
+          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
+
+        <img class="thumb pointer-event rounded-2"
+          src="https://images.pexels.com/photos/2121320/pexels-photo-2121320.jpeg?auto=compress&cs=tinysrgb&w=3840"
+          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
       </div>
     </div>
   </section>
@@ -278,6 +294,39 @@
     }
 
     requestAnimationFrame(raf);
+  </script>
+  <script>
+
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.querySelectorAll(".thumb");
+    const imageList = Array.from(thumbnails).map(t => t.src);
+    let currentIndex = 0;
+
+    const clearActiveBorders = () => {
+      thumbnails.forEach(thumb => thumb.classList.remove("active-thumb"));
+    };
+
+    const updateImage = (index) => {
+      mainImage.src = imageList[index];
+      clearActiveBorders();
+      thumbnails[index].classList.add("active-thumb");
+      currentIndex = index;
+    };
+
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        updateImage(index);
+        clearInterval(slideshow); 
+      });
+    });
+
+    const slideshow = setInterval(() => {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      updateImage(currentIndex);
+    }, 3000);
+
+    updateImage(0); 
+
   </script>
 </body>
 
