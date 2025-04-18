@@ -11,35 +11,43 @@
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="dive.css">
 
 <body>
   <div class="img-fluid wraper">
+
+    <img class="bg-img" src="https://wallpaperaccess.com/full/3129223.jpg" alt="Background" />
+
     <header>
       <nav class="navbar navbar-expand-lg" style="padding: 2vw">
         <div class="container-fluid">
-          <a class="navbar-brand" style="
-              color: white;
-              font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-                'Helvetica Neue', sans-serif;
-              font-size: 2rem;
-              font-weight: 700;
-              letter-spacing: 1em;
-            " href="#">Dive</a>
-
+          <a class="navbar-brand" href="#" style="
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+            'Helvetica Neue', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1em;
+          ">
+            <span class="reveal-wrapper"><span>Dive</span></span>
+          </a>
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link fw-medium" href="Register.html">Register</a>
+                <span class="reveal-wrapper">
+                  <a class="nav-link fw-medium" href="Register.html">Register</a>
+                </span>
               </li>
               <li class="nav-item">
-                <a class="nav-link fw-semibold" href="#f">Contact-US</a>
+                <span class="reveal-wrapper">
+                  <a class="nav-link fw-semibold" href="#f">Contact-US</a>
+                </span>
               </li>
             </ul>
           </div>
-
 
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
             aria-controls="mobileMenu" aria-label="Toggle navigation">
@@ -51,36 +59,39 @@
       <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel"
         style="height: 100vh; background-color: rgba(0, 0, 0, 0.9); color: white;">
         <div class="offcanvas-header">
-          <h5 id="mobileMenuLabel">Menu</h5>
+          <h5 id="mobileMenuLabel">
+            <span class="reveal-wrapper"><span>Menu</span></span>
+          </h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
             style="filter: invert(1);"></button>
         </div>
         <div class="offcanvas-body text-center">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-white" href="Register.html">Register</a>
+              <span class="reveal-wrapper">
+                <a class="nav-link text-white" href="Register.html">Register</a>
+              </span>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#f">Contact-US</a>
+              <span class="reveal-wrapper">
+                <a class="nav-link text-white" href="#f">Contact-US</a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </header>
 
-
-
     <section style="height: 50vh; position: absolute; padding-left: 5vw">
       <div class="container custom">
-        <div class="display-3 container-fluid d1">Deep Dive,</div>
-        <div class="display-4 container-fluid d2">dream big</div>
+        <div class="display-3 mb-2 container-fluid d1"><span class="reveal-wrapper"><span>Deep Dive,</span></span></div>
+        <div class="display-4 container-fluid d2"> <span class="reveal-wrapper"><span>dream big</span></span> </div>
         <div class="display-6 container-fluid d3">
-          The ocean is calling, and I must dive.
+          <span class="reveal-wrapper"><span>The ocean is calling, and I must dive.</span></span>
         </div>
       </div>
     </section>
   </div>
-  </section>
 
   <section style="
         position: relative;
@@ -102,7 +113,7 @@
 
   <section style="min-height: 100vh; width: 100%; padding: 2vw; margin-top: 5vw;">
     <div style="color: black; font-weight: 700; text-align: center;">
-      <h2>What we Provide ?</h2>
+      <h2 id="t3">What we Provide ?</h2>
     </div>
     <div class="provider-container">
       <div class="image-container">
@@ -264,6 +275,40 @@
 
 
   <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.utils.toArray(".reveal-wrapper").forEach((el, i) => {
+      gsap.to(el, {
+        height: "auto",
+        opacity: 1,
+        scaleY: 1,
+        duration: 2,
+        ease: "power3.out"
+      });
+    });
+
+
+    gsap.to(".bg-img", {
+      scale: 1,
+      duration: 3,
+      ease: "power2.out"
+    });
+
+    gsap.fromTo("#t3",{ opacity: 0, y: 10 }, 
+      {
+        opacity: 1, 
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#t3",
+          start: "top center", 
+          toggleActions: "play none none reverse" 
+        }
+      })
+
+  </script>
   <script>
     const ele = document.querySelector(".about-us");
 
@@ -316,7 +361,7 @@
     thumbnails.forEach((thumb, index) => {
       thumb.addEventListener("click", () => {
         updateImage(index);
-        clearInterval(slideshow); 
+        clearInterval(slideshow);
       });
     });
 
@@ -325,7 +370,7 @@
       updateImage(currentIndex);
     }, 3000);
 
-    updateImage(0); 
+    updateImage(0);
 
   </script>
 </body>
