@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .loader {
+        width: 100%;
+        height: 100vh;
+        background-color: #FDFAF6;
+        position: relative;
+      }
+      .counter{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 10rem;
+        font-weight: 800;
+        color: #000000;
+        padding: 5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="counter">
+        0
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      let counter = 70;
+      const counterElement = document.querySelector('.counter');
+      const interval = setInterval(() => {
+        counter += 1;
+        counterElement.textContent = counter;
+        if (counter >= 100) {
+          clearInterval(interval);
+          window.location.href = 'dive.html';
+        }
+      }, 70);
+    </script>
+  </body>
+</html>

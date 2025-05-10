@@ -1,378 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dive - Ocean is Calling</title>
+    <meta discription="Website for deep dive into ocean" />
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dive - Ocean is Calling</title>
-  <meta discription="Website for deep dive into ocean" />
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="dive.css" />
 
-<link rel="stylesheet" href="dive.css">
+  <body>
 
-<body>
-  <div class="img-fluid wraper">
+    <div class="img-fluid wraper">
+      <img
+        class="bg-img"
+        src="https://wallpaperaccess.com/full/3129223.jpg"
+        alt="Background"
+      />
 
-    <img class="bg-img" src="https://wallpaperaccess.com/full/3129223.jpg" alt="Background" />
+      <header>
+        <nav class="navbar navbar-expand-lg" style="padding: 2vw">
+          <div class="container-fluid">
+            <a
+              class="navbar-brand"
+              href="#"
+              style="
+                color: white;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                  'Helvetica Neue', sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 1em;
+              "
+            >
+              <span class="reveal-wrapper"><span>Dive</span></span>
+            </a>
 
-    <header>
-      <nav class="navbar navbar-expand-lg" style="padding: 2vw">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <span class="reveal-wrapper">
+                    <a class="nav-link fw-medium" href="Register.html"
+                      >Register</a
+                    >
+                  </span>
+                </li>
+                <li class="nav-item">
+                  <span class="reveal-wrapper">
+                    <a class="nav-link fw-semibold" href="#f">Contact-US</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav>
+
+        <div
+          class="offcanvas offcanvas-top"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+          style="
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont,
-            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-            'Helvetica Neue', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: 1em;
-          ">
-            <span class="reveal-wrapper"><span>Dive</span></span>
-          </a>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+          "
+        >
+          <div class="offcanvas-header">
+            <h5 id="mobileMenuLabel">
+              <span class="reveal-wrapper"><span>Menu</span></span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="filter: invert(1)"
+            ></button>
+          </div>
+          <div class="offcanvas-body text-center">
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <span class="reveal-wrapper">
-                  <a class="nav-link fw-medium" href="Register.html">Register</a>
+                  <a class="nav-link text-white" href="Register.html"
+                    >Register</a
+                  >
                 </span>
               </li>
               <li class="nav-item">
                 <span class="reveal-wrapper">
-                  <a class="nav-link fw-semibold" href="#f">Contact-US</a>
+                  <a class="nav-link text-white" href="#f">Contact-US</a>
                 </span>
               </li>
             </ul>
           </div>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-            aria-controls="mobileMenu" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
-      </nav>
+      </header>
 
-      <div class="offcanvas offcanvas-top" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel"
-        style="height: 100vh; background-color: rgba(0, 0, 0, 0.9); color: white;">
-        <div class="offcanvas-header">
-          <h5 id="mobileMenuLabel">
-            <span class="reveal-wrapper"><span>Menu</span></span>
-          </h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
-            style="filter: invert(1);"></button>
+      <section style="height: 50vh; position: absolute; padding-left: 5vw">
+        <div class="container custom">
+          <div class="display-3 mb-2 container-fluid d1">
+            <span class="reveal-wrapper"><span>Deep Dive,</span></span>
+          </div>
+          <div class="display-4 container-fluid d2">
+            <span class="reveal-wrapper"><span>dream big</span></span>
+          </div>
+          <div class="display-6 container-fluid d3">
+            <span class="reveal-wrapper"
+              ><span>The ocean is calling, and I must dive.</span></span
+            >
+          </div>
         </div>
-        <div class="offcanvas-body text-center">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <span class="reveal-wrapper">
-                <a class="nav-link text-white" href="Register.html">Register</a>
-              </span>
-            </li>
-            <li class="nav-item">
-              <span class="reveal-wrapper">
-                <a class="nav-link text-white" href="#f">Contact-US</a>
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+      </section>
+    </div>
 
-    <section style="height: 50vh; position: absolute; padding-left: 5vw">
-      <div class="container custom">
-        <div class="display-3 mb-2 container-fluid d1"><span class="reveal-wrapper"><span>Deep Dive,</span></span></div>
-        <div class="display-4 container-fluid d2"> <span class="reveal-wrapper"><span>dream big</span></span> </div>
-        <div class="display-6 container-fluid d3">
-          <span class="reveal-wrapper"><span>The ocean is calling, and I must dive.</span></span>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <section style="
+    <section
+      style="
         position: relative;
         height: 100vh;
         width: 100%;
         padding: 5vw;
         padding-top: 7vw;
-      ">
-    <div class="containe about-us" style="color: black">
-      <div class="display-1">About Us</div>
-      <br />
-      <div class="display-6 ">
-        We are a team of passionate divers and ocean enthusiasts dedicated to
-        exploring the depths of the sea. Our mission is to promote marine
-        conservation and share the beauty of underwater life with the world.
-      </div>
-    </div>
-  </section>
-
-  <section style="min-height: 100vh; width: 100%; padding: 2vw; margin-top: 5vw;">
-    <div style="color: black; font-weight: 700; text-align: center;">
-      <h2 id="t3">What we Provide ?</h2>
-    </div>
-    <div class="provider-container">
-      <div class="image-container">
-        <img src="https://images.pexels.com/photos/3266821/pexels-photo-3266821.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="QoS">
-        <div class="overlay">
-          <p>Quality of Service ❤</p>
-          <span>
-            We ensure the highest quality of service for our customers.
-            Our team is dedicated to providing exceptional experiences and
-            support throughout your diving journey.
-          </span>
+      "
+    >
+      <div class="containe about-us" style="color: black">
+        <div class="display-1">About Us</div>
+        <br />
+        <div class="display-6">
+          We are a team of passionate divers and ocean enthusiasts dedicated to
+          exploring the depths of the sea. Our mission is to promote marine
+          conservation and share the beauty of underwater life with the world.
         </div>
-      </div>
-      <div class="image-container">
-        <img src="https://images.pexels.com/photos/3635910/pexels-photo-3635910.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="Support">
-        <div class="overlay">
-          <p>Good Marine View 🐬</p>
-          <span>
-            Experience the breathtaking beauty of marine life with us.
-            Our diving tours offer stunning views of coral reefs, vibrant
-            fish, and other underwater wonders that will leave you in awe.
-          </span>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="https://images.pexels.com/photos/12302979/pexels-photo-12302979.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="Security">
-        <div class="overlay">
-          <p>Secure & Reliable</p>
-          <span>
-            Your safety is our top priority. We adhere to strict safety
-            protocols and standards to ensure a secure diving experience.
-            You can trust us to keep you safe while you explore the ocean.
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <section class="vh-100 w-100 text-black p-4 mt-5">
-    <div>
-      <div class="display-6">
-        Freaquently Asked Questions
-      </div>
-      <div class="faq-container">
-        <div class="faq">
-          <div class="faq-header">How do I register for a scuba diving session? <span>+</span></div>
-          <p class="faq-answer">You can register for a scuba diving session online through our website. Simply choose
-            your preferred date, location, and package, then complete the payment process.</p>
-        </div>
-        <div class="faq">
-          <div class="faq-header">Do I need prior experience to register? <span>+</span></div>
-          <p class="faq-answer">No prior experience is required. We offer beginner-friendly sessions with professional
-            instructors who guide you through the basics before diving.</p>
-        </div>
-        <div class="faq">
-          <div class="faq-header">What should I bring for my scuba diving session? <span>+</span></div>
-          <p class="faq-answer">We provide all necessary scuba gear. However, you should bring swimwear, a towel,
-            sunscreen, and a change of clothes for after the session.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="vh-100 w-100">
-    <div
-      class="container-fluid h-100 d-flex flex-column flex-md-row p-4 gap-3 align-items-start justify-content-between">
-
-      <div class="flex-grow-1 w-100">
-        <img id="mainImage" class="img-fluid w-100 rounded shadow"
-          src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
-          alt="Main Display" style="max-height: 80vh; object-fit: cover; object-position: center;" />
-      </div>
-
-      <div class="d-flex flex-row flex-wrap gap-2" id="thumbnailContainer">
-        <img class="thumb pointer-event rounded-2"
-          src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
-          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
-
-        <img class="thumb pointer-event rounded-2"
-          src="https://images.pexels.com/photos/2711640/pexels-photo-2711640.jpeg?auto=compress&cs=tinysrgb&w=3840"
-          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
-
-        <img class="thumb pointer-event rounded-2"
-          src="https://images.pexels.com/photos/1274009/pexels-photo-1274009.jpeg?auto=compress&cs=tinysrgb&w=3840"
-          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
-
-        <img class="thumb pointer-event rounded-2"
-          src="https://images.pexels.com/photos/2121320/pexels-photo-2121320.jpeg?auto=compress&cs=tinysrgb&w=3840"
-          style="width: 100px; height: 60px; object-fit: cover; cursor: pointer;" />
-      </div>
-    </div>
-  </section>
-
-
-  <footer id="f" style="display: flex; align-items: end; width: 100%; height: 100vh">
-    <div class="container-fluid ban">
-      <div>
-        <div class="contact">
-          <div class="display-1 inner">Dive</div>
-          <div>
-            <div>
-              <h4 style="color: rgb(110, 110, 110)">Contact-us</h4>
-            </div>
-            <div>Gmail - <a href="Dive@gmail.com">Dive@gmail.com</a></div>
-            <div>Phone -888-241-124</div>
+        <div class="team-display">
+          <div class="team">
+            <img src="https://files.idyllic.app/files/static/4071320?width=256&optimizer=image" alt="" style="width: 100%; height: 100%;">
+          </div>
+          <div class="team">
+            <img src="https://t4.ftcdn.net/jpg/07/57/59/25/360_F_757592568_v96NBkRahyTl9QFa99qpcmePYnfoXwZq.jpg" alt="" style="width: 100%; height: 100%;">
+          </div>
+          <div class="team">
+            <img src="https://t3.ftcdn.net/jpg/01/78/60/12/360_F_178601298_AbZq48t6u9k8bV7RSG8YrKuj7QxAGlhH.jpg" alt="" style="width: 100%; height: 100%;">
+          </div>
+          <div class="team">
+            <img src="https://thumbs.dreamstime.com/b/passport-photo-laughing-brazilian-young-adult-man-braces-isolated-white-background-cut-out-216475750.jpg" alt="" style="width: 100%; height: 100%;">
+          </div>
+          <div class="team">
+            <img src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFzc3BvcnQlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D" alt="" style="width: 100%; height: 100%;">
           </div>
         </div>
-        <div style="
+      </div>
+    </section>
+
+    <section
+      style="min-height: 100vh; width: 100%; padding: 2vw; margin-top: 5vw"
+    >
+      <div style="color: black; font-weight: 700; text-align: center">
+        <h2 id="t3">What we Provide ?</h2>
+      </div>
+      <div class="provider-container">
+        <div class="image-container">
+          <img
+            src="https://images.pexels.com/photos/3266821/pexels-photo-3266821.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="QoS"
+            class="img-box"
+          />
+          <div class="overlay">
+            <p>Quality of Service ❤</p>
+            <span>
+              We ensure the highest quality of service for our customers. Our
+              team is dedicated to providing exceptional experiences and support
+              throughout your diving journey.
+            </span>
+          </div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.pexels.com/photos/3635910/pexels-photo-3635910.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Support"
+            class="img-box"
+          />
+          <div class="overlay">
+            <p>Good Marine View 🐬</p>
+            <span>
+              Experience the breathtaking beauty of marine life with us. Our
+              diving tours offer stunning views of coral reefs, vibrant fish,
+              and other underwater wonders that will leave you in awe.
+            </span>
+          </div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.pexels.com/photos/12302979/pexels-photo-12302979.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Security"
+            class="img-box"
+          />
+          <div class="overlay">
+            <p>Secure & Reliable</p>
+            <span>
+              Your safety is our top priority. We adhere to strict safety
+              protocols and standards to ensure a secure diving experience. You
+              can trust us to keep you safe while you explore the ocean.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vh-100 w-100 text-black p-4 mt-5">
+      <div>
+        <div class="display-6">Freaquently Asked Questions</div>
+        <div class="faq-container">
+          <div class="faq">
+            <div class="faq-header">
+              How do I register for a scuba diving session? <span>+</span>
+            </div>
+            <p class="faq-answer">
+              You can register for a scuba diving session online through our
+              website. Simply choose your preferred date, location, and package,
+              then complete the payment process.
+            </p>
+          </div>
+          <div class="faq">
+            <div class="faq-header">
+              Do I need prior experience to register? <span>+</span>
+            </div>
+            <p class="faq-answer">
+              No prior experience is required. We offer beginner-friendly
+              sessions with professional instructors who guide you through the
+              basics before diving.
+            </p>
+          </div>
+          <div class="faq">
+            <div class="faq-header">
+              What should I bring for my scuba diving session? <span>+</span>
+            </div>
+            <p class="faq-answer">
+              We provide all necessary scuba gear. However, you should bring
+              swimwear, a towel, sunscreen, and a change of clothes for after
+              the session.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vh-100 w-100">
+      <div
+        class="container-fluid h-100 d-flex flex-column flex-md-row p-4 gap-3 align-items-start justify-content-between"
+      >
+        <div class="flex-grow-1 w-100">
+          <img
+            id="mainImage"
+            class="img-fluid w-100 rounded shadow"
+            src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
+            alt="Main Display"
+          />
+        </div>
+
+        <div class="d-flex flex-row flex-wrap gap-2" id="thumbnailContainer">
+          <img
+            class="thumb pointer-event rounded-2"
+            src="https://images.pexels.com/photos/1774843/pexels-photo-1774843.jpeg?auto=compress&cs=tinysrgb&w=3840"
+            style="
+              width: 100px;
+              height: 60px;
+              object-fit: cover;
+              cursor: pointer;
+            "
+          />
+
+          <img
+            class="thumb pointer-event rounded-2"
+            src="https://images.pexels.com/photos/2711640/pexels-photo-2711640.jpeg?auto=compress&cs=tinysrgb&w=3840"
+            style="
+              width: 100px;
+              height: 60px;
+              object-fit: cover;
+              cursor: pointer;
+            "
+          />
+
+          <img
+            class="thumb pointer-event rounded-2"
+            src="https://images.pexels.com/photos/1274009/pexels-photo-1274009.jpeg?auto=compress&cs=tinysrgb&w=3840"
+            style="
+              width: 100px;
+              height: 60px;
+              object-fit: cover;
+              cursor: pointer;
+            "
+          />
+
+          <img
+            class="thumb pointer-event rounded-2"
+            src="https://images.pexels.com/photos/2121320/pexels-photo-2121320.jpeg?auto=compress&cs=tinysrgb&w=3840"
+            style="
+              width: 100px;
+              height: 60px;
+              object-fit: cover;
+              cursor: pointer;
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer
+      id="f"
+      style="display: flex; align-items: end; width: 100%; height: 100vh"
+    >
+      <div class="container-fluid ban">
+        <div>
+          <div class="contact">
+            <div class="display-1 inner">Dive</div>
+            <div>
+              <div>
+                <h4 style="color: rgb(110, 110, 110)">Contact-us</h4>
+              </div>
+              <div>Gmail - <a href="Dive@gmail.com">Dive@gmail.com</a></div>
+              <div>Phone -888-241-124</div>
+            </div>
+          </div>
+          <div
+            style="
               display: flex;
               justify-content: space-between;
               align-items: center;
               margin-top: 10px;
-            ">
-          <div style="font-size: larger">© 2024 All rights reserved.</div>
-          <div style="display: flex">
-            <div>
-              <a href="https://www.facebook.com/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
-                  viewBox="0,0,255.99297,255.99297">
-                  <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                    style="mix-blend-mode: normal">
-                    <g transform="scale(5.12,5.12)">
-                      <path
-                        d="M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z">
-                      </path>
+            "
+          >
+            <div style="font-size: larger">© 2024 All rights reserved.</div>
+            <div style="display: flex">
+              <div>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="40"
+                    height="40"
+                    viewBox="0,0,255.99297,255.99297"
+                  >
+                    <g
+                      fill="#ffffff"
+                      fill-rule="nonzero"
+                      stroke="none"
+                      stroke-width="1"
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      stroke-miterlimit="10"
+                      stroke-dasharray=""
+                      stroke-dashoffset="0"
+                      font-family="none"
+                      font-weight="none"
+                      font-size="none"
+                      text-anchor="none"
+                      style="mix-blend-mode: normal"
+                    >
+                      <g transform="scale(5.12,5.12)">
+                        <path
+                          d="M25,3c-12.15,0 -22,9.85 -22,22c0,11.03 8.125,20.137 18.712,21.728v-15.897h-5.443v-5.783h5.443v-3.848c0,-6.371 3.104,-9.168 8.399,-9.168c2.536,0 3.877,0.188 4.512,0.274v5.048h-3.612c-2.248,0 -3.033,2.131 -3.033,4.533v3.161h6.588l-0.894,5.783h-5.694v15.944c10.738,-1.457 19.022,-10.638 19.022,-21.775c0,-12.15 -9.85,-22 -22,-22z"
+                        ></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </a>
-            </div>
-            <div>
-              <a href="https://in.linkedin.com/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40"
-                  viewBox="0,0,255.99297,255.99297">
-                  <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                    style="mix-blend-mode: normal">
-                    <g transform="scale(5.12,5.12)">
-                      <path
-                        d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
-                      </path>
+                  </svg>
+                </a>
+              </div>
+              <div>
+                <a href="https://in.linkedin.com/" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="40"
+                    height="40"
+                    viewBox="0,0,255.99297,255.99297"
+                  >
+                    <g
+                      fill="#ffffff"
+                      fill-rule="nonzero"
+                      stroke="none"
+                      stroke-width="1"
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      stroke-miterlimit="10"
+                      stroke-dasharray=""
+                      stroke-dashoffset="0"
+                      font-family="none"
+                      font-weight="none"
+                      font-size="none"
+                      text-anchor="none"
+                      style="mix-blend-mode: normal"
+                    >
+                      <g transform="scale(5.12,5.12)">
+                        <path
+                          d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z"
+                        ></path>
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </a>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-
-  <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.utils.toArray(".reveal-wrapper").forEach((el, i) => {
-      gsap.to(el, {
-        height: "auto",
-        opacity: 1,
-        scaleY: 1,
-        duration: 2,
-        ease: "power3.out"
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.utils.toArray(".reveal-wrapper").forEach((el, i) => {
+        gsap.to(el, {
+          height: "auto",
+          opacity: 1,
+          scaleY: 1,
+          duration: 2,
+          ease: "power3.out",
+        });
       });
-    });
 
+      gsap.to(".bg-img", {
+        scale: 1,
+        duration: 3,
+        ease: "power2.out",
+      });
 
-    gsap.to(".bg-img", {
-      scale: 1,
-      duration: 3,
-      ease: "power2.out"
-    });
-
-    gsap.fromTo("#t3",{ opacity: 0, y: 10 }, 
-      {
-        opacity: 1, 
-        y: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#t3",
-          start: "top center", 
-          toggleActions: "play none none reverse" 
+      gsap.fromTo(
+        "#t3",
+        { opacity: 0, y: 10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: "#t3",
+            start: "top center",
+            toggleActions: "play none none reverse",
+          },
         }
-      })
+      );
 
-  </script>
-  <script>
-    const ele = document.querySelector(".about-us");
+      gsap.fromTo(
+        ".img-box",
+        {
+          opacity: 0,
+          height: "0%",
+        },
+        {
+          opacity: 1,
+          height: "80vh",
+          delay: 0.5,
+          duration: 2.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: "#t3",
+            start: "top center",
+          },
+        }
+      );
+    </script>
+    <script>
+      const ele = document.querySelector(".about-us");
 
-    window.addEventListener("scroll", () => {
-      console.log("Scroll Position:", window.scrollY);
+      window.addEventListener("scroll", () => {
+        console.log("Scroll Position:", window.scrollY);
 
-      if (window.scrollY > 680) {
-        ele.classList.add("about-us-description");
-        ele.classList.remove("about-us");
+        if (window.scrollY > 680) {
+          ele.classList.add("about-us-description");
+          ele.classList.remove("about-us");
+        }
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".faq").forEach((faq) => {
+        faq.addEventListener("click", function () {
+          this.classList.toggle("open");
+          let icon = this.querySelector(".faq-header span");
+          icon.textContent = this.classList.contains("open") ? "−" : "+";
+        });
+      });
+
+      if(performance.navigation.type == 1) {
+        window.location.href = "loader.html";
       }
-    });
-  </script>
-  <script>
-    document.querySelectorAll(".faq").forEach(faq => {
-      faq.addEventListener("click", function () {
-        this.classList.toggle("open");
-        let icon = this.querySelector(".faq-header span");
-        icon.textContent = this.classList.contains("open") ? "−" : "+";
-      });
-    });
-  </script>
-  <script>
-    const lenis = new Lenis();
+    </script>
+    <script>
+      const lenis = new Lenis();
 
-    function raf(time) {
-      lenis.raf(time);
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
       requestAnimationFrame(raf);
-    }
+    </script>
+    <script>
+      const mainImage = document.getElementById("mainImage");
+      const thumbnails = document.querySelectorAll(".thumb");
+      const imageList = Array.from(thumbnails).map((t) => t.src);
+      let currentIndex = 0;
 
-    requestAnimationFrame(raf);
-  </script>
-  <script>
+      const updateImage = (index) => {
+        mainImage.src = imageList[index];
+        clearActiveBorders();
+        currentIndex = index;
+      };
 
-    const mainImage = document.getElementById("mainImage");
-    const thumbnails = document.querySelectorAll(".thumb");
-    const imageList = Array.from(thumbnails).map(t => t.src);
-    let currentIndex = 0;
-
-    const clearActiveBorders = () => {
-      thumbnails.forEach(thumb => thumb.classList.remove("active-thumb"));
-    };
-
-    const updateImage = (index) => {
-      mainImage.src = imageList[index];
-      clearActiveBorders();
-      thumbnails[index].classList.add("active-thumb");
-      currentIndex = index;
-    };
-
-    thumbnails.forEach((thumb, index) => {
-      thumb.addEventListener("click", () => {
-        updateImage(index);
-        clearInterval(slideshow);
+      thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => {
+          updateImage(index);
+          clearInterval(slideshow);
+        });
       });
-    });
 
-    const slideshow = setInterval(() => {
-      currentIndex = (currentIndex + 1) % imageList.length;
-      updateImage(currentIndex);
-    }, 3000);
+      const slideshow = setInterval(() => {
+        currentIndex = (currentIndex + 1) % imageList.length;
+        updateImage(currentIndex);
+      }, 5000);
 
-    updateImage(0);
-
-  </script>
-</body>
-
+      updateImage(0);
+    </script>
+  </body>
 </html>
