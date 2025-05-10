@@ -188,7 +188,6 @@ body {
   width: 5vw;
   height: 5vw;
   border-radius: 50%;
-  background-color: red;
   overflow: hidden;
 }
 
@@ -203,11 +202,19 @@ body {
   .image-container {
     width: 50vw;
   }
+  .team{
+    width: 7vw;
+    height: 7vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .image-container {
     width: 60vw;
+  }
+  .team{
+    width: 10vw;
+    height: 10vw;
   }
 }
 
