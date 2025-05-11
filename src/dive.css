@@ -1,6 +1,7 @@
 body {
   color: white;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 .wraper {
   position: relative;
