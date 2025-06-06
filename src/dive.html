@@ -470,6 +470,24 @@
           },
         }
       );
+
+      gsap.fromTo(
+        ".sec3-box3",
+        {
+          opacity: 0,
+          height: "0%",
+        },
+        {
+          opacity: 1,
+          height: "45vh",
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".sec3-box1",
+            start: "top center",
+          },
+        }
+      );
     </script>
     <script>
       const ele = document.querySelector(".about-us");
